@@ -1,0 +1,163 @@
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../images/bg-intro-desktop.png);
+  background-color: hsl(0, 100%, 74%);
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+
+.main > h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  /* For smaller screens */
+  text-align: center;
+  margin: 50px 0 20px 0;
+}
+
+.main-p {
+  color: #fff;
+  font-weight: 400;
+  /* For smaller screens */
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Row */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.row-sec {
+  padding: 0 1em;
+}
+
+.row-sec1 {
+  padding: 0 1em;
+}
+
+.box-1 {
+  background-color: hsl(248, 32%, 49%);
+  text-align: center;
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 6px -6px black;
+  padding: 20px;
+}
+
+/* Form */
+
+form {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.flex-items {
+  display: flex;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  height: 50px;
+  margin: 40px 20px 0 20px;
+  border-radius: 4px;
+  padding-left: 1em;
+  flex: 1;
+}
+
+input::placeholder {
+  font-weight: 400;
+}
+
+.btn {
+  margin: 20px 20px 10px 20px;
+}
+
+button[type="submit"].btn-2 {
+  height: 55px;
+  cursor: pointer;
+  background-color: hsl(154, 59%, 51%);
+  color: #fff;
+  flex: 1;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.5s ease-in-out;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+button[type="submit"].btn-2:hover {
+  background-color: darkgreen;
+}
+
+span a {
+  color: red;
+}
+
+span {
+  display: block;
+  font-size: x-small;
+  text-align: center;
+  margin-top: 15px;
+  padding-bottom: 30px;
+  color: hsl(246, 25%, 77%);
+  /* For smaller screens */
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+/* Media Queries */
+
+@media (min-width: 726px) {
+  .wrapper {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .row {
+    flex-direction: row;
+    height: 750px;
+  }
+
+  .row-sec {
+    flex: 5;
+    align-self: center;
+    padding: 0 1em;
+  }
+
+  .row-sec1 {
+    flex: 6;
+    align-self: center;
+    padding: 0 1em;
+  }
+
+  /* Header */
+  .main > h1 {
+    text-align: initial;
+    margin-top: 0;
+  }
+
+  .main-p {
+    text-align: initial;
+  }
+}
+
+@media (min-width: 1440px) {
+  .wrapper {
+    width: 70%;
+    max-width: 1120px;
+  }
+}
