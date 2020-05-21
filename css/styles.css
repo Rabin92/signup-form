@@ -4,7 +4,7 @@
 }
 
 body {
-  background: url(../images/bg-intro-desktop.png);
+  background: url(../images/bg-intro-mobile.png);
   background-color: hsl(0, 100%, 74%);
   font-size: 1em;
   font-family: "Poppins", sans-serif;
@@ -122,6 +122,11 @@ span {
 /* Media Queries */
 
 @media (min-width: 726px) {
+  body {
+    background: url(../images/bg-intro-desktop.png);
+    background-color: hsl(0, 100%, 74%);
+  }
+
   .wrapper {
     width: 70%;
     margin: 0 auto;
