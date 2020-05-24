@@ -5,6 +5,7 @@
 
 body {
   background: url(../images/bg-intro-mobile.png);
+  background-size: cover;
   background-color: hsl(0, 100%, 74%);
   font-size: 1em;
   font-family: "Poppins", sans-serif;
@@ -124,6 +125,8 @@ span {
 @media (min-width: 726px) {
   body {
     background: url(../images/bg-intro-desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     background-color: hsl(0, 100%, 74%);
   }
 
