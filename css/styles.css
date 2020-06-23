@@ -1,42 +1,59 @@
 /* Base Styles */
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 body {
-  background: url(../images/bg-intro-mobile.png);
-  background-size: cover;
-  background-color: hsl(0, 100%, 74%);
-  font-size: 1em;
   font-family: "Poppins", sans-serif;
+  font-size: 1em;
+
+  background: url(../images/bg-intro-mobile.png);
+  background-color: hsl(0, 100%, 74%);
+  background-size: cover;
 }
 
 /* Header */
 
 .main > h1 {
-  color: #fff;
   font-size: 3rem;
   font-weight: 700;
-  /* For smaller screens */
-  text-align: center;
+
   margin: 50px 0 20px 0;
+  /* For smaller screens */
+
+  text-align: center;
+
+  color: #fff;
 }
 
 .main-p {
-  color: #fff;
   font-weight: 400;
-  /* For smaller screens */
-  text-align: center;
+
   margin-bottom: 40px;
+  /* For smaller screens */
+
+  text-align: center;
+
+  color: #fff;
 }
 
 /* Row */
 
 .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+
   margin-bottom: 40px;
+
+  -ms-flex-wrap: wrap;
+
+  flex-wrap: wrap;
 }
 
 .row-sec {
@@ -48,24 +65,30 @@ body {
 }
 
 .box-1 {
-  background-color: hsl(248, 32%, 49%);
+  margin-bottom: 20px;
+  padding: 20px;
+
   text-align: center;
+
   color: #fff;
   border-radius: 8px;
-  margin-bottom: 20px;
+  background-color: hsl(248, 32%, 49%);
+  -webkit-box-shadow: 0 8px 6px -6px black;
   box-shadow: 0 8px 6px -6px black;
-  padding: 20px;
 }
 
 /* Form */
 
 form {
-  background-color: #fff;
   border-radius: 10px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 8px 6px -6px black;
   box-shadow: 0 8px 6px -6px black;
 }
 
 .flex-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -74,9 +97,31 @@ input[type="email"],
 input[type="password"] {
   height: 50px;
   margin: 40px 20px 0 20px;
-  border-radius: 4px;
   padding-left: 1em;
+
+  border-radius: 4px;
+
+  -webkit-box-flex: 1;
+
+  -ms-flex: 1;
+
   flex: 1;
+}
+
+input::-webkit-input-placeholder {
+  font-weight: 400;
+}
+
+input::-moz-placeholder {
+  font-weight: 400;
+}
+
+input:-ms-input-placeholder {
+  font-weight: 400;
+}
+
+input::-ms-input-placeholder {
+  font-weight: 400;
 }
 
 input::placeholder {
@@ -89,15 +134,25 @@ input::placeholder {
 
 button[type="submit"].btn-2 {
   height: 55px;
+
   cursor: pointer;
-  background-color: hsl(154, 59%, 51%);
-  color: #fff;
-  flex: 1;
-  text-align: center;
-  border-radius: 5px;
-  border: none;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
   transition: background-color 0.5s ease-in-out;
+  text-align: center;
+
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(154, 59%, 51%);
+  -webkit-box-shadow: 0 8px 6px -6px black;
   box-shadow: 0 8px 6px -6px black;
+
+  -webkit-box-flex: 1;
+
+  -ms-flex: 1;
+
+  flex: 1;
 }
 
 button[type="submit"].btn-2:hover {
@@ -109,15 +164,19 @@ span a {
 }
 
 span {
-  display: block;
   font-size: x-small;
-  text-align: center;
+
+  display: block;
+
   margin-top: 15px;
+  padding-right: 4em;
   padding-bottom: 30px;
-  color: hsl(246, 25%, 77%);
   /* For smaller screens */
   padding-left: 4em;
-  padding-right: 4em;
+
+  text-align: center;
+
+  color: hsl(246, 25%, 77%);
 }
 
 /* Media Queries */
@@ -125,9 +184,9 @@ span {
 @media (min-width: 726px) {
   body {
     background: url(../images/bg-intro-desktop.png);
-    background-size: cover;
-    background-repeat: no-repeat;
     background-color: hsl(0, 100%, 74%);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .wrapper {
@@ -136,26 +195,45 @@ span {
   }
 
   .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+
     height: 750px;
   }
 
   .row-sec {
-    flex: 5;
-    align-self: center;
     padding: 0 1em;
+
+    -webkit-box-flex: 5;
+
+    -ms-flex: 5;
+
+    flex: 5;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
   }
 
   .row-sec1 {
-    flex: 6;
-    align-self: center;
     padding: 0 1em;
+
+    -webkit-box-flex: 6;
+
+    -ms-flex: 6;
+
+    flex: 6;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
   }
 
   /* Header */
   .main > h1 {
-    text-align: initial;
     margin-top: 0;
+
+    text-align: initial;
   }
 
   .main-p {
